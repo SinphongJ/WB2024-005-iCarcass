@@ -1,0 +1,73 @@
+<head>
+    <style>
+        .bg-thead {
+            text-align: left;
+            background: #CCEFF3;
+            color: #000
+            }
+        .calloutbg {
+            text-align: left;
+            background: #56c656;;
+            color: #ffffff
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="card-header">
+        <div class="callout callout-success calloutbg ">
+            <h2>Addhock[Authorized : User]</h2>
+            <p>จัดการยางเข้าระบบ AP2022-002-iCarcass สามารถทำได้ 2 แบบ</p>
+            <p>1. เลข GR จากการรับของบน AP2020-001-iGR</p>
+            <p>2. Addhock</p>
+        </div>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form class="form-horizontal" asp-action="" asp-controller="">
+        <div class="card-body">
+            <div class="form-group row">
+                <table class="table table-bordered text-center"style="height: auto;">
+                                      <thead class="bg-thead">
+                                        <tr>
+                                          <th>Material</th>
+                                          <th>Description</th>
+                                          <th>จำนวนรับเข้า</th>
+                                          <th>หน่วย</th>
+                                          <th style="width: 40px;"></th>
+                                          <th style="width: 40px;"></th>
+                                          <th>PO No.</th>
+                                          <th>GR No.</th>
+                                          <th>MaterialRequest Doc</th>
+                                          <th>Part No.<span class="danger badge badge-danger">*</span></th>
+                                          <th>Serial No.<span class="danger badge badge-danger">*</span></th>
+                                          <th>Asset No.</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        @for(var item=0; item<=10; item++){
+                                        <tr>
+                                          <td>410700024</td>
+                                          <td>ยางหน้า 1000-20</td>
+                                          <td>1</td>
+                                          <td>EA</td>
+                                          <td></td>
+                                          <td></td>
+                                          <td>300627495</td>
+                                          <td>5000814937</td>
+                                          <td></td>
+                                          <td><input type="text" class="form-control" style="width: auto;"></td>
+                                          <td><input type="text" class="form-control" style="width: auto;"></td>
+                                          <td><input type="text" class="form-control" style="width: auto;"></td>
+                                        </tr>
+                                        }
+                                      </tbody>
+                                    </table>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">บันทึก</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>

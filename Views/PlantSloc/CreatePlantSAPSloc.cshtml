@@ -1,0 +1,203 @@
+<head>
+  <style>
+    .calloutbg {
+      text-align: left;
+      background: #56c656;
+      color: #fff
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="card">
+            <div class="card-header">
+              <div class="callout callout-success calloutbg">
+                <h2>CreatePlant [Authorized : SystemAll]</h2>
+                <p>- SAP คือการ Referen Plant, Sloc มาเข้าระบบรับซาก</p>
+                <p>- สร้างเอง คือ ไม่เกี่ยวข้องกับ SAP สร้าง Plant, Sloc เองเพื่อใช้กับระบบรับซากเท่านั่น</p>
+              </div>
+            </div>
+  <!-- /.card-header -->
+  <!-- form start -->
+            <div class="card-body">
+              <div class="formbold-main-wrapper">
+            <!-- Author: FormBold Team -->
+            <!-- Learn More: https://formbold.com -->
+            <div class="formbold-form-wrapper">
+                  <div class="formbold-steps">
+                      <ul>
+                          <li class="formbold-step-menu1 ">
+                              <span>1</span>
+                              เลือกระบบ Plant
+                          </li>
+                          <li class="formbold-step-menu2 ">
+                              <span>2</span>
+                              สร้าง Plant
+                          </li>
+                          <li class="formbold-step-menu3 active">
+                              <span>3</span>
+                              เลือก Sloc
+                          </li>
+                            <li class="formbold-step-menu4 ">
+                              <span>4</span>
+                              เลือก ผู้อนุมัติ
+                          </li>
+                      </ul>
+                  </div>
+            </div>
+              </div>
+            </div>
+    </div>
+    <div class="card">
+        <form asp-action="CreateSlocSelect" asp-controller="PlantSloc">
+        <div class="card-body">
+              <div id="container" class="container mt-5">
+                <div class="mb-3">
+                    <div class="form-group" >
+                            <select class="form-control select2" style="width: 100%;" id="field2" name="field2">
+                              <option selected="selected">กรุณาเลือก Sloc//พิมพ์ค้นหาได้</option>
+                              <option>Alaska</option>
+                              <option>California</option>
+                              <option>Delaware</option>
+                              <option>Tennessee</option>
+                              <option>Texas</option>
+                              <option>Washington</option>
+                              </select>
+                  </div>
+                </div> 
+              </div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default"></button>
+          <a class="btn btn-light" asp-action="CreatePlantselect" asp-controller="PlantSloc">กลับ</a>
+          <button type="button" class="btn btn-default"></button>
+          <button type="submit" class="btn btn-warning">ไปต่อ</button>
+          <button type="button" class="btn btn-default"></button>
+        </div>
+      </form>
+            <style>
+              .button1 {
+                  background-color: #09f7ff; /* Green */
+                  border: none;
+                  color: white;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 30px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                }
+                .button2 {
+                  background-color: #fded0b; /* Green */
+                  border: none;
+                  color: white;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 30px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                }
+                .button1 {padding: 32px 16px;}
+                .button2 {padding: 32px 16px;}
+            </style>
+          </div> 
+  <script src="~/AdminLTE/plugins/jquery/jquery.min.js"></script>
+  <script src="~/AdminLTE/plugins/dropzone/min/dropzone.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+    integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+    integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+    crossorigin="anonymous" />
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 68px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+       align-items: center;
+    justify-content: center;
+  }
+  .formbold-steps ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .formbold-steps li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+  }
+  .formbold-steps li span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DDE3EC;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #536387;
+  }
+  .formbold-steps li.active {
+    color: #07074D;;
+  }
+  .formbold-steps li.active span {
+    background: #137c2a;
+    color: #FFFFFF;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+ .select2-selection__rendered {
+      line-height: 29px !important;
+
+    }
+
+    .select2-container .select2-selection--single {
+      height: 35px !important;
+      width: 100%;
+    }
+
+    .select2-selection__arrow {
+      height: 34px !important;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+      // เรียกใช้ Select2 ใน drop-down list ที่มี id เป็น "dropdown"
+      $('#dropdown').select2();
+    });
+    $('.select2').select2()
+</script>
+  </div>
+</div>
+</body>

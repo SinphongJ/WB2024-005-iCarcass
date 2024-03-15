@@ -1,0 +1,271 @@
+<head>
+  <style>
+    .bg-thead {
+      text-align: left;
+            background: #39b6ff;
+            color: #000000
+    }
+    .calloutbg {
+      text-align: left;
+      background: #56c656;
+      color: #fff
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="card">
+  <div class="card-header">
+    <div class="callout callout-success calloutbg">
+      <h2>Sloc [Authorized : SystemAll]</h2>
+      <p>Sloc ทั้งหมดของระบบรับซาก สามารถเลือก Sloc ที่มีอยู่แล้วมาจับคู่กับ Plant หรือจะสร้างใหม่ก็ได้</p>
+    </div>
+  </div>
+  <!-- /.card-header -->
+  <!-- form start -->
+  <div class="card-body">
+          <div class="form-group">
+            <a class="btn btn-success"data-toggle="modal" data-target="#modal-xl" class="btn btn-success">เพิ่ม Sloc</a><br />
+          </div>
+          <div class="form-group">
+              <table class="table table-bordered text-center">
+                <thead class="bg-thead">
+                  <tr>
+                    <th>CscAutoID</th>
+                    <th>SlocID</th>
+                    <th>SlocName</th>
+                    <th>Catergory</th>
+                    <th>CatergoryName</th>
+                    <th>เลือก</th>
+                  </tr>
+                </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>5200</td>
+                      <td>คลังขนส่ง</td>
+                      <td>Location</td>
+                      <td>สถาที่</td>
+                      <td><a asp-action="" asp-controller="" class="btn btn-success">เลือก</a></td>
+                    </tr>
+                  </tbody>
+              </table>
+          </div>
+  </div>
+</div>
+@if(Model=="Car"){
+                <div class="card">
+                  <div class="card-body">
+                      <div class="col-md-30">
+                        <h5 class="text-center">กรุณาเลือกรถ</h5>
+                            <div class="form-group">
+                                <div class="col-md-30">
+                                    <div class="form-group">
+                                        <select class="form-control select2" style="width: 100%;">
+                                            <option selected="selected">กรุณาเลือกรถ//พิมพ์ค้นหาได้</option>
+                                            <option>Alaska</option>
+                                            <option>California</option>
+                                            <option>Delaware</option>
+                                            <option>Tennessee</option>
+                                            <option>Texas</option>
+                                            <option>Washington</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                      <button type="submit" class="btn btn-success">บันทึก</button>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                  </div>
+                </div>
+} else if(Model=="Lacation"){
+                  <div class="card">
+                  <div class="card-body">
+                    <div class="col-md-30">
+                        <h5 class="text-center">กรุณาเลือกระบบ</h5>
+                              <div class="form-group">
+                                  <div class="col-md-30">
+                                        <div class="form-group">
+                                            <label for="" class="btn btn-info">- SAP</label><label for=""> คือการ Referen Plant, Sloc มาเข้าระบบรับซาก</label>                                                     
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="" class="btn btn-primary">- สร้างเอง</label><label for=""> คือ ไม่เกี่ยวข้องกับ SAP สร้าง Plant, Sloc เองเพื่อใช้กับระบบรับซากเท่านั่น</label>
+                                        </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                      <button type="button" class="btn btn-default"></button>
+                      <button type="submit" class="btn btn-info"data-toggle="modal" data-target="#modal-slocSAP">SAP</button>
+                      <button type="button" class="btn btn-default"></button>
+                      <input type="hidden" id="data" name="data" value="2" />
+                      <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modal-sloccreate">สร้างเอง</button>
+                      <button type="button" class="btn btn-default"></button>
+                  </div>
+                </div>
+}else if(Model=="Other"){
+                <div class="card">
+                  <form>
+                      <div class="card-body">
+                          <h5 class="text-center">กรุณากรอกข้อมูล Sloc</h5>
+                              <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1"><span class="right badge badge-danger">*</span>กรุณากรอก SlocID</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                          placeholder="แนะนำเป็นภาษาอังกฤษหรือตัวเลขไม่มีเว้นวรรค">
+                                        <label for="exampleInputPassword1"><span class="right badge badge-danger">*</span>กรุณากรอก SlocName</label>
+                                        <input type="text" class="form-control" id="exampleInputPassword1"
+                                          placeholder="สามารถเป็นภาษาไทยได้ไม่มีเว้นวรรค">                            
+                                    </div>
+                                  </div>
+                              </div>
+                      </div>
+                      <!-- /.card-body -->
+                      <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-default"></button>
+                        <button type="button" class="btn btn-success">บันทึก</button>
+                        <button type="button" class="btn btn-default"></button>
+                      </div>
+                  </form>
+                </div>
+}
+    <div class="modal fade" id="modal-xl">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-center">กรุณาเลือก Sloc</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form asp-action="OpencardAddSloc" asp-controller="PlantSloc">
+            <div class="modal-body">
+                <div class="form-group">
+                  <div class="col-md-30">
+                      <div class="form-group">
+                          <select class="form-control" for="datasloc" id="datasloc" name="datasloc">
+                              <option selected="selected">กรุณาเลือกประเภทของ Sloc</option>
+                              <option value="Car">Car</option>
+                              <option value="Lacation">Lacation</option>
+                              <option value="Other">Other</option>
+                          </select>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default"></button>
+              <button type="submit" class="btn btn-success">บันทึก</button>
+              <button type="button" class="btn btn-default"></button>
+            </div>
+            </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+    <div class="modal fade" id="modal-slocSAP">
+        <div class="modal-dialog modal-slocSAP">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-center">กรุณาเลือก Sloc</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form asp-action="" asp-controller="">
+            <div class="modal-body">
+                <div class="form-group">
+                  <div class="col-md-30">
+                      <div class="form-group">
+                              <select class="form-control" for="">
+                                  <option selected="selected">กรุณาเลือก Sloc</option>
+                                  <option value="1">Car</option>
+                                  <option value="2">Lacation</option>
+                                  <option value="3">Approve</option>
+                                  <option value="4">User</option>
+                              </select>
+                        </div>
+                  </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default"></button>
+              <button type="submit" class="btn btn-success">บันทึก</button>
+              <button type="button" class="btn btn-default"></button>
+            </div>
+            </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+    <div class="modal fade" id="modal-sloccreate">
+        <div class="modal-dialog modal-sloccreate">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-center">กรุณาเลือก Sloc</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form asp-action="" asp-controller="">
+            <div class="modal-body">
+                <div class="form-group">
+                  <div class="col-md-30">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1"><span class="right badge badge-danger">*</span>กรุณากรอก SlocID</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1"
+                              placeholder="แนะนำเป็นภาษาอังกฤษหรือตัวเลขไม่มีเว้นวรรค">
+                          <label for="exampleInputPassword1"><span class="right badge badge-danger">*</span>กรุณากรอก SlocName</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1"
+                              placeholder="สามารถเป็นภาษาไทยได้ไม่มีเว้นวรรค">                            
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default"></button>
+              <button type="submit" class="btn btn-success">บันทึก</button>
+              <button type="button" class="btn btn-default"></button>
+            </div>
+            </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+<script src="~/AdminLTE/plugins/jquery/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+    integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+    integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+    crossorigin="anonymous" />
+<style>
+    .select2-selection__rendered {
+      line-height: 29px !important;
+
+    }
+
+    .select2-container .select2-selection--single {
+      height: 35px !important;
+      width: 100%;
+    }
+
+    .select2-selection__arrow {
+      height: 34px !important;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      // เรียกใช้ Select2 ใน drop-down list ที่มี id เป็น "dropdown"
+      $('#dropdown').select2();
+    });
+    $('.select2').select2()
+</script>
+</body>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WB2024-005-iCarcass.props" />
+</Project>

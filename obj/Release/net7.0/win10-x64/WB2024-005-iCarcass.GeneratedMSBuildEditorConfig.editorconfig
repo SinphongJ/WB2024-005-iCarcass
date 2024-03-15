@@ -1,0 +1,183 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WB2024_005_iCarcass
+build_property.RootNamespace = WB2024_005_iCarcass
+build_property.ProjectDir = D:\Project\WB2024-005-iCarcass\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Project\WB2024-005-iCarcass
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Project/WB2024-005-iCarcass/Views/Account/Autrorize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBdXRyb3JpemUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/Account/CreateAuthorized.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmVhdGVBdXRob3JpemVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/Account/EditAuthorized.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0QXV0aG9yaXplZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/GRNoAndAddHock/AddHock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR1JOb0FuZEFkZEhvY2tcQWRkSG9jay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/GRNoAndAddHock/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR1JOb0FuZEFkZEhvY2tcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/MasterCondi/MasterCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyQ29uZGlcTWFzdGVyQ29uZGl0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/ConfigPlant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENvbmZpZ1BsYW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/ConfigPlantAP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENvbmZpZ1BsYW50QVAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/ConfigPlantV1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENvbmZpZ1BsYW50VjEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreatePlant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVBsYW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreatePlantAP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVBsYW50QVAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreatePlantMe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVBsYW50TWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreatePlantSAP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVBsYW50U0FQLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreatePlantSAPSloc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVBsYW50U0FQU2xvYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreatePlantselect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVBsYW50c2VsZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreatePlantSloc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVBsYW50U2xvYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreateSloc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVNsb2MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreateSlocAP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVNsb2NBUC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreateSlocCar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVNsb2NDYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreateSlocCarSelect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVNsb2NDYXJTZWxlY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreateSlocOther.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVNsb2NPdGhlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/CreateSlocSelect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXENyZWF0ZVNsb2NTZWxlY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXEluZGV4Mi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/Plant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXFBsYW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/ReportPlant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXFJlcG9ydFBsYW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/PlantSloc/Sloc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRTbG9jXFNsb2MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/UserConfig/ConfigApprovePlantSloc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckNvbmZpZ1xDb25maWdBcHByb3ZlUGxhbnRTbG9jLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/UserConfig/ConfigApprovePlantSlocAP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckNvbmZpZ1xDb25maWdBcHByb3ZlUGxhbnRTbG9jQVAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/UserConfig/ConfigApprovePlantSlocSelect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckNvbmZpZ1xDb25maWdBcHByb3ZlUGxhbnRTbG9jU2VsZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/UserConfig/ReportApprovePlantSloc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckNvbmZpZ1xSZXBvcnRBcHByb3ZlUGxhbnRTbG9jLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/UserConfig/UserConfigPlantSloc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckNvbmZpZ1xVc2VyQ29uZmlnUGxhbnRTbG9jLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/WB2024-005-iCarcass/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-t9k9c6gzox
+
+[D:/Project/WB2024-005-iCarcass/Views/Shared/_Main.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-uxkcgrxbn4

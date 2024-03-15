@@ -1,0 +1,138 @@
+<head>
+    <title> | Create</title>
+    <style>
+        .bg-thead {
+            text-align: left;
+            background: #CCEFF3;
+            color: #000
+        }
+        .calloutbg {
+      text-align: left;
+      background: #56c656;
+      color: #fff
+    }
+    </style>
+</head>
+<div class="card">
+        <div class="card-header">
+            <div class="callout callout-success calloutbg">
+            <h2>MasterCondition [Authorized : SystemAll]</h2>
+            <p>กำหนดเงื่อนไขเพื่อไปออกรายงานสามารถแก้ไขได้</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <section class="content">
+            <div class="container-fluid">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="text" class="form-control" placeholder="HdtAutoId" hidden>
+                    <!-- SELECT1 -->
+                    <div class="card card-info">
+
+                        <div class="card-header">
+                            <h3 class="card-title"></h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <!--.card-body -->
+                        <div class="card-body">
+                                    <div class="form-group">
+                                        <table class="table table-bordered">
+                                            <thead class="bg-thead">
+                                                <tr>
+                                                <th>MAutoId</th>
+                                                <th>Id</th>
+                                                <th>ชื่อ</th>
+                                                <th>ค่าของเงื่อนไข</th>
+                                                <th>หน่วย</th>
+                                                <th>ชื่อผู้สร้าง</th>
+                                                <th>วันเวลาที่สร้าง</th>
+                                                <th>ชื่อผู้แก้ไข</th>
+                                                <th>วันเวลาที่แก้ไข</th>
+                                                <th>แก้ไข</th>
+                                                </tr>
+                                            </thead>
+                                                <tbody>
+                                                    <tr>
+                                                    <td>1</td>
+                                                    <td>Y4</td>
+                                                    <td>TaylorSwift</td>
+                                                    <td>18</td>
+                                                    <td>EA</td>
+                                                    <td>itim</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a class="btn btn-warning" 
+                                                            data-toggle="modal" data-target="#modal-Edit"  data-id1="">
+                                                            แก้ไข
+                                                        </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>2</td>
+                                                    <td>Y3</td>
+                                                    <td>รถสิบล้อ</td>
+                                                    <td>10</td>
+                                                    <td>EA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a class="btn btn-warning" 
+                                                            data-toggle="modal" data-target="#modal-Edit"  data-id1="">
+                                                            แก้ไข
+                                                        </a></td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.card-body -->
+                    </div>           
+                </form>
+            </div>
+            </section>
+        </div>    
+</div>
+<div class="modal fade" id="modal-Edit" tabindex="-1" role="dialog" aria-labelledby="deleteconformation">
+    <div class="modal-dialog" style="width:501px !important;margin:0 auto;">
+        <div class="modal-content">
+            <div class="modal-header" style="background:#ffc72b;color:white;">
+            </div>
+            <form asp-action="" asp-controller="">
+            <div class="modal-body">
+                <h2 class="text-center">
+                        แก้ไข ค่าของเงื่อนไข และ หน่วย
+                    </h2>
+                <div class="form-group">
+                  <div class="col-md-30">
+                      <div class="form-group">
+                            <label for=""></label>
+                          <input type="text" class="form-control" id="exampleInputEmail1"
+                              placeholder="แนะนำเป็นภาษาอังกฤษหรือตัวเลขไม่มีเว้นวรรค">
+                            <label for=""></label>
+                          <select class="form-control" for="">
+                                  <option selected="selected">EA</option>
+                                  <option value="1">EA</option>
+                                  <option value="2">....</option>
+                                  <option value="3">....</option>
+                                  <option value="4">.....</option>
+                                </select>                            
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-default"></button>
+                        <button type="submit" class="btn btn-success">บันทึก</button>
+                        <button type="button" class="btn btn-default"></button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

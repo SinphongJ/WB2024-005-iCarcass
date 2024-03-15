@@ -1,0 +1,88 @@
+<head>
+    <style>
+        .bg-thead {
+            text-align: left;
+            background: #CCEFF3;
+            color: #000
+            }
+        .calloutbg {
+            text-align: left;
+            background: #56c656;;
+            color: #ffffff
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="card-header">
+        <div class="callout callout-success calloutbg ">
+            <h2>GR[Authorized : User]</h2>
+            <p>จัดการยางเข้าระบบ AP2022-002-iCarcass สามารถทำได้ 2 แบบ</p>
+            <p>1. เลข GR จากการรับของบน AP2020-001-iGR</p>
+            <p>2. Addhock</p>
+        </div>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form class="form-horizontal" asp-action="" asp-controller="">
+        <div class="card-body">
+            <div class="form-group row">
+                <label for="departmentId" class="col-sm-2 col-form-label">
+                    <span class="danger badge badge-danger">*</span>GR No.</label>
+                <div class="col-sm-6">
+                    <!-- select -->
+                    <div class="form-group">
+                        <input type="text" class="form-control" id=""
+                          placeholder="กรุณากรอกข้อมูล">  
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">ค้นหา</button>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="card">
+    <!-- form start -->
+        <div class="card-body">
+            <div class="form-group row">
+                <div class="card-body table-responsive text-center" style="height: auto;">
+                    <table class="table table-bordered  text-center">
+                        <thead class="bg-thead">
+                            <tr>
+                                <th>Material</th>
+                                <th>Description</th>
+                                <th>จำนวน</th>
+                                <th>หน่วย</th>
+                                <th>ทำรายการ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>410700024</td>
+                                <td>ยางหน้า 1000-20</td>
+                                <td>10</td>
+                                <td>EA</td>
+                                <td><a asp-action="AddHock" asp-controller="GRNoAndAddHock"
+                                    class="btn btn-success">
+                                        ทำรายการ</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4107054</td>
+                                <td>ยางหน้า 1000-20</td>
+                                <td>1</td>
+                                <td>EA</td>
+                                <td><a asp-action="AddHock" asp-controller="GRNoAndAddHock"
+                                    class="btn btn-success">
+                                        ทำรายการ</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>  
+</body>

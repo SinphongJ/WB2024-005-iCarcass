@@ -1,0 +1,249 @@
+<head>
+  <style>
+    .bg-thead {
+      text-align: left;
+            background: #9ae4ec;
+            color: #000
+    }
+    .calloutbg {
+      text-align: left;
+      background: #56c656;
+      color: #fff
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="~/AdminLTE/plugins/dropzone/min/dropzone.min.css">
+</head>
+
+<body>
+  <div class="card">
+                  <div class="card-header">
+                        <div class="callout callout-success calloutbg">
+                          <h2>Plant [Authorized : SystemAll]</h2>
+                          <p>หน้าสร้าง Plant ระบบรับซากเป็น Plant แยกต่างหากไม่มีเกี่ยวข้องกับ SAP</p>
+                        </div>
+                  </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <section class="content">
+                  <div class="container-fluid">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="text" class="form-control" placeholder="HdtAutoId" hidden>
+<!-- showPlant -->
+                                <div class="card card-info">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Plant</h3>
+                                                <div class="card-tools">
+                                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                        <i class="fas fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- /.card-header -->
+                                            <div class="card-body">
+                                                <div class="form-group">
+                                                <button class="btn btn-success"data-toggle="modal" data-target="#modal-xl" >เพิ่ม Plant </button>
+                                                </div>
+                                                <div class="form-group">
+                                                <table class="table table-bordered text-center">
+                                              <thead class="bg-thead">
+                                                <tr>
+                                                  <th>PAutoID</th>
+                                                  <th>PlantID</th>
+                                                  <th>PlantName</th>
+                                                  <th>Sloc</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>1</td>
+                                                  <td>HO01</td>
+                                                  <td>สำนักงานใหญ่</td>
+                                                  <td><a asp-action="Plant" asp-controller="PlantSloc" class="btn btn-warning">Sloc</a></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>2</td>
+                                                  <td>Esan</td>
+                                                  <td>โซนภาคอีสาน</td>
+                                                  <td><a asp-action="Plant" asp-controller="PlantSloc" class="btn btn-warning">Sloc</a></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>3</td>
+                                                  <td>Trn</td>
+                                                  <td>รถขนส่ง</td>
+                                                  <td><a asp-action="Plant" asp-controller="PlantSloc" class="btn btn-warning">Sloc</a></td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                                </div>
+                                  </div>           <!-- /.card-body -->
+                                </div>
+<!-- SELECT2 --> 
+                    @if(Model==1){
+                                <div class="card card-info">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">เพิ่ม Plant ผ่านระบบ SAP</h3>
+                                                                <div class="card-tools">
+                                                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                                      <i class="fas fa-minus"></i>
+                                                                    </button>
+                                                                        @* <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                                                            <i class="fas fa-times"></i>
+                                                                            </button> *@
+                                                                </div>
+                                                        </div>
+                                            <!-- /.card-header -->
+                                                            <div class="card-body">
+                                                                <div class="col-md-30">
+                                                                        <form asp-action="Sloc" asp-controller="PlantSloc">
+                                                                          <div class="form-group">
+                                                                                  <div class="col-md-30">
+                                                                                      <div class="form-group">
+                                                                                        <label>SAP คือการ Referen Plant, Sloc มาเข้าระบบรับซาก</label>
+                                                                                        <select class="form-control select2" style="width: 100%;">
+                                                                                          <option selected="selected">Alabama</option>
+                                                                                          <option>Alaska</option>
+                                                                                          <option>California</option>
+                                                                                          <option>Delaware</option>
+                                                                                          <option>Tennessee</option>
+                                                                                          <option>Texas</option>
+                                                                                          <option>Washington</option>
+                                                                                        </select>
+                                                                                      </div>
+                                                                                          <div class="form-group">
+                                                                                              <button type="submit" class="btn btn-success">SaveAndGo</button>
+                                                                                          </div>
+                                                                                  </div>
+                                                                            </div>
+                                                                        </form>
+                                                                            
+                                                                </div>
+                                                            </div>     
+                                </div>
+                    }@if(Model==2){
+<!-- SELECT3 -->                                
+                                <div class="card card-info">
+                                    <div class="card-header">
+                                        <h3 class="card-title">เพิ่ม Plant เอง</h3>
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                  <i class="fas fa-minus"></i>
+                                                </button>
+                                                    @* <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                                        <i class="fas fa-times"></i>
+                                                        </button> *@
+                                            </div>
+                                    </div>
+                            <!-- /.card-header -->
+                                    <form >
+                                        <div class="card-body">
+                                          <h5 class="text-center">กรุณาเลือก Plant</h5>
+                                          <div class="row">
+                                            <div class="col-md-12">
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1"><span class="right badge badge-danger">*</span>กรุณากรอก PlantID</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                  placeholder="แนะนำเป็นภาษาอังกฤษหรือตัวเลขไม่มีเว้นวรรค">
+                                                <label for="exampleInputPassword1"><span class="right badge badge-danger">*</span>กรุณากรอก PlantName</label>
+                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                  placeholder="สามารถเป็นภาษาไทยได้ไม่มีเว้นวรรค">
+                                                <!-- /.card-body -->
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      <div class="modal-footer justify-content-between">
+                                        <button type="button" class="btn btn-default"></button>
+                                        <button type="button" class="btn btn-success">SaveAndGo</button>
+                                        <button type="button" class="btn btn-default"></button>
+                                      </div>
+                                    </form>
+                                </div>
+}
+                  
+                  </div>
+    </section>
+  </div>
+  <div class="modal fade" id="modal-xl">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-center">กรุณาเลือกระบบ</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                  <div class="col-md-30">
+                        <div class="form-group">
+                            <label for="" class="btn btn-info">- SAP</label><label for=""> คือการ Referen Plant, Sloc มาเข้าระบบรับซาก</label>                                                     
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="btn btn-primary">- สร้างเอง</label><label for=""> คือ ไม่เกี่ยวข้องกับ SAP สร้าง Plant, Sloc เองเพื่อใช้กับระบบรับซากเท่านั่น</label>
+                        </div>
+                  </div>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default"></button>
+              <form asp-action="OpencardAddPlant" asp-controller="PlantSloc">
+              <input type="hidden" id="data" name="data" value="1" />
+              <button type="submit" class="btn btn-info">SAP</button>
+              </form>
+              <button type="button" class="btn btn-default"></button>
+              <form asp-action="OpencardAddPlant" asp-controller="PlantSloc">
+              <input type="hidden" id="data" name="data" value="2" />
+              <button type="submit" class="btn btn-primary">สร้างเอง</button>
+              </form>
+              <button type="button" class="btn btn-default"></button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+  <script src="~/AdminLTE/plugins/jquery/jquery.min.js"></script>
+  <script src="~/AdminLTE/plugins/dropzone/min/dropzone.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+    integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+    integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+    crossorigin="anonymous" />
+  <style>
+    /* Blue */
+    .multipleChosen,
+    .multipleSelect2 {
+      width: 300px;
+    }
+    .select2-selection__rendered {
+      line-height: 29px !important;
+
+    }
+
+    .select2-container .select2-selection--single {
+      height: 35px !important;
+      width: 100%;
+    }
+
+    .select2-selection__arrow {
+      height: 34px !important;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      // เรียกใช้ Select2 ใน drop-down list ที่มี id เป็น "dropdown"
+      $('#dropdown').select2();
+    });
+    
+    $('.select2').select2()
+
+    @* $('.select2bs4').select2({
+      theme: 'bootstrap4'
+      }) *@
+  </script>
+</body>

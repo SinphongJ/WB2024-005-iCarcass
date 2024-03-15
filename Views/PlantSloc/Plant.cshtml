@@ -1,0 +1,115 @@
+<head>
+    <title> | Create</title>
+    <style>
+        .bg-thead {
+            text-align: left;
+            background: #CCEFF3;
+            color: #000
+        }
+        .calloutbg {
+      text-align: left;
+      background: #56c656;
+      color: #fff
+    }
+    </style>
+</head>
+<div class="card">
+        <div class="card-header">
+            <div class="callout callout-success calloutbg">
+            <h2>Plant [Authorized : SystemAll]</h2>
+            <p>หน้าสร้าง Plant ระบบรับซากเป็น Plant แยกต่างหากไม่มีเกี่ยวข้องกับ SAP</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <section class="content">
+            <div class="container-fluid">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="text" class="form-control" placeholder="HdtAutoId" hidden>
+                    <!-- SELECT1 -->
+                    <div class="card card-info">
+
+                        <div class="card-header">
+                            <h3 class="card-title">Plant : HO01 - สำนักงานใหญ่ รายการที่มีอยู่แล้ว</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <!--.card-body -->
+                        <div class="card-body">
+                                    <div class="form-group">
+                                    <a class="btn btn-success" asp-action="Sloc" asp-controller="PlantSloc">เพิ่ม Sloc </a>
+                                    </div>
+                                    <div class="form-group">
+                                        <table class="table table-bordered text-center">
+                                            <thead class="bg-thead">
+                                                <tr>
+                                                <th>CpsAutoID</th>
+                                                <th>SlocID</th>
+                                                <th>SlocName</th>
+                                                <th>Catergory</th>
+                                                <th>CatergoryName</th>
+                                                <th>ลบ</th>
+                                                </tr>
+                                            </thead>
+                                                <tbody>
+                                                    <tr>
+                                                    <td>3</td>
+                                                    <td>5200</td>
+                                                    <td>คลังขนส่ง</td>
+                                                    <td>Location</td>
+                                                    <td>สถาที่</td>
+                                                    <td><a class="btn btn-danger" 
+                                                            data-toggle="modal" data-target="#modal-Delete"  data-id1="">
+                                                            <div class="icon">
+                                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                                            </div>
+                                                        </a></td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.card-body -->
+                    </div>           
+                </form>
+            </div>
+            </section>
+        </div>    
+</div>
+     
+<div class="modal fade" id="modal-Delete" tabindex="-1" role="dialog" aria-labelledby="deleteconformation">
+    <div class="modal-dialog" style="width:501px !important;margin:0 auto;">
+        <div class="modal-content">
+            <div class="modal-header" style="background:#d9534f;color:white;">
+                <h4 class="modal-title" id="delete-conformation">
+                    Delete Confirmation
+                </h4>
+            </div>
+            <form asp-action="Delete" asp-controller="Create" asp-route-startDate="@ViewBag.StartDate" asp-route-endDate="@ViewBag.EndDate">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <span>
+                                    Are you sure you want to delete?
+                                </span>
+                                <input class="btn btn-xs btn-flat inputs" name="id" type="text" id="id1" value="id1"
+                                    readonly />
+                                <input class="btn btn-xs btn-flat inputs" type="text" id="id2" readonly />
+                            </div>
+                        </div>
+                    </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

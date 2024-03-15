@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "rQV78jfkB5mh9LP7BWpRlQpSwPzpybu4I1FepnA4w7blkRLdNuUxxo81iylSz8h1UkM5g3+f60x9ehbXcpXvJA==",
+  "success": true,
+  "projectFilePath": "d:\\GitHub\\WB2024-005-iCarcass\\Code\\WB2024-005-iCarcass.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\peerachai.k\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\peerachai.k\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\peerachai.k\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\peerachai.k\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

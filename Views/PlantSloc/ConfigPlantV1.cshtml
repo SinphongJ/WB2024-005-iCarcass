@@ -1,0 +1,217 @@
+<head>
+  <style>
+    .bg-thead {
+      text-align: left;
+            background: #9ae4ec;
+            color: #000
+    }
+    .calloutbg {
+      text-align: left;
+      background: #56c656;
+      color: #fff
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="~/AdminLTE/plugins/dropzone/min/dropzone.min.css">
+</head>
+
+<body>
+  <div class="card">
+                  <div class="card-header">
+                        <div class="callout callout-success calloutbg">
+                          <h2>ConfigPlant [Authorized : SystemAll]</h2>
+                          <p>Plant, Sloc ระบบรับซากแยกต่างหากไม่มีเกี่ยวข้องกับ SAP</p>
+                        </div>
+                  </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <section class="content">
+        <div class="container-fluid">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="text" class="form-control" placeholder="HdtAutoId" hidden>
+<!-- showPlant -->
+            <div class="card card-info">
+                <div class="card-header">
+                    <h2 class="card-title">เลือก Plant </h2>
+                    <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+@* <button type="button" class="btn btn-tool" data-card-widget="remove">
+<i class="fas fa-times"></i>
+</button> *@
+                    </div>
+                </div>
+<!-- /.card-header -->
+    <form asp-action="OpenCardSloc" asp-controller="PlantSloc">
+                <div class="card-body">
+                    <div class="col-md-30">
+                            <div class="form-group">
+                                <div class="col-md-30">
+                                    <div class="form-group">
+                                    <label>SAP คือการ Referen Plant, Sloc มาเข้าระบบรับซาก</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option selected="selected">กรุณาเลือก Plant //พิมพ์ค้นหาได้</option>
+                                        <option>Alaska</option>
+                                        <option>California</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
+                                     </select>
+                                    </div>
+                                </div>
+                            </div>     
+                    </div>
+                </div>
+            
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default"></button>
+              <a class="btn btn-info" asp-action="" asp-controller="">สร้าง Plant</a>
+              <button type="button" class="btn btn-default"></button>
+              <input type="hidden" id="data" name="data" value="oncardsloc" />
+              <button type="submit" class="btn btn-warning">ไปต่อ</button>
+              <button type="button" class="btn btn-default"></button>
+            </div>
+    </form>  
+            </div>   
+<!-- SELECT2 --> 
+                    @if(Model=="oncardsloc"){
+          <div class="card card-info">
+                <div class="card-header">
+                    <h2 class="card-title">เลือก Sloc </h2>
+                    <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+@* <button type="button" class="btn btn-tool" data-card-widget="remove">
+<i class="fas fa-times"></i>
+</button> *@
+                    </div>
+                </div>
+<!-- /.card-header -->
+    <form asp-action="OpenCardAP" asp-controller="PlantSloc">
+                <div class="card-body">
+                    <div class="col-md-30">
+                            <div class="form-group">
+                                <div class="col-md-30">
+                                    <div class="form-group">
+                                    <label>SAP คือการ Referen Plant, Sloc มาเข้าระบบรับซาก</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option selected="selected">กรุณาเลือก Sloc //พิมพ์ค้นหาได้</option>
+                                        <option>Alaska</option>
+                                        <option>California</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
+                                     </select>
+                                    </div>
+                                </div>
+                            </div>     
+                    </div>
+                </div>
+            
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default"></button>
+              <a class="btn btn-info" asp-action="" asp-controller="">กลับ</a>
+              <button type="button" class="btn btn-default"></button>
+              <input type="hidden" id="datasloc" name="datasloc" value="oncardsloc" />
+              <input type="hidden" id="dataap" name="dataap" value="oncardAP" />
+              <button type="submit" class="btn btn-warning">ไปต่อ</button>
+              <button type="button" class="btn btn-default"></button>
+            </div>
+    </form>  
+            </div>  
+                    }@if(Model=="oncardAP"){
+<!-- SELECT3 -->                                
+                               <div class="card card-info">
+                <div class="card-header">
+                    <h2 class="card-title">เลือก ผู้อนุมัติ </h2>
+                    <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+@* <button type="button" class="btn btn-tool" data-card-widget="remove">
+<i class="fas fa-times"></i>
+</button> *@
+                    </div>
+                </div>
+<!-- /.card-header -->
+    <form asp-action="" asp-controller="">
+                <div class="card-body">
+                    <div class="col-md-30">
+                            <div class="form-group">
+                                <div class="col-md-30">
+                                    <div class="form-group">                      
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option selected="selected">กรุณาเลือก Sloc //พิมพ์ค้นหาได้</option>
+                                        <option>Alaska</option>
+                                        <option>California</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
+                                     </select>
+                                    </div>
+                                </div>
+                            </div>     
+                    </div>
+                </div>
+            
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default"></button>
+              <input type="hidden" id="data" name="data" value="oncardAP"/>
+              <button type="submit" class="btn btn-success">บันทึก</button>
+              <button type="button" class="btn btn-default"></button>
+            </div>
+    </form>  
+            </div>
+}                
+                  </div>
+    </section>
+  </div>
+  <script src="~/AdminLTE/plugins/jquery/jquery.min.js"></script>
+  <script src="~/AdminLTE/plugins/dropzone/min/dropzone.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+    integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+    integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+    crossorigin="anonymous" />
+  <style>
+    /* Blue */
+    .multipleChosen,
+    .multipleSelect2 {
+      width: 300px;
+    }
+    .select2-selection__rendered {
+      line-height: 29px !important;
+
+    }
+
+    .select2-container .select2-selection--single {
+      height: 35px !important;
+      width: 100%;
+    }
+
+    .select2-selection__arrow {
+      height: 34px !important;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      // เรียกใช้ Select2 ใน drop-down list ที่มี id เป็น "dropdown"
+      $('#dropdown').select2();
+    });
+    
+    $('.select2').select2()
+
+    @* $('.select2bs4').select2({
+      theme: 'bootstrap4'
+      }) *@
+  </script>
+</body>

@@ -1,0 +1,139 @@
+@{
+
+}
+<head>
+    <style>
+        .bg-thead {
+            text-align: left;
+            background: #CCEFF3;
+            color: #000
+        }
+
+        .calloutbg {
+            text-align: left;
+            background: #56c656;
+            color: #ffffff
+        }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <section class=" content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="callout callout-success calloutbg">
+                            <h3>Authorized User</h3>
+
+                                <p>1. SystemAll คือ ดูข้อมูลได้ทุกหน้า เพิ่ม ลบ แก้ไข ได้ทุกหน้า</p>
+                                <p>2. Admin คือ ดูข้อมูลได้ทุกหน้า เพิ่ม ลบ แก้ไขหน้า Master หรือ Config ต่างๆ และทำรายการได้</p>  
+                                <p>3. Approve คือ ดูข้อมูลได้ทุกหน้า อนุมัติ และทำรายการได้</p>
+                                <p>4. User คือ ดูข้อมูลได้ทุกหน้า และทำรายการได้หากจะเพิ่ม Authorized อื่นๆ ติดต่อ IT</p>
+                                <p>** หากไม่พบชื่อในนี้กรุณาติดต่อ HR แจ้งเพิ่มสิทธิ์การใช้งานโปรแกรม WB2024-005-iCarcass</p>
+                        </div>
+                        <br />
+                    </div>
+
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="card-body  table-responsive p-0" style="height: *;">
+                                        <table id="tblAuthorized" class="table table-bordered text-center">
+                                            <thead class="bg-thead">
+                                                <tr>
+                                                    <th style="width: 5px" class="text-center">EDCAutoID</th>
+                                                    <th style="width: 40px" class="text-center">รหัสพนักงาน</th>
+                                                    <th style="width: 200px" class="text-center">ชื่อ</th>
+                                                    <th style="width: 200px" class="text-center">นามสกุล</th>
+                                                    <th style="width: 50px" class="text-center">Authorized</th>
+                                                    <th style="width: 200px" class="text-center">รายละเอียด</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                <td>13</td>
+                                                <td>adminit</td>
+                                                <td>System</td>
+                                                <td>adminit</span></td>
+                                                <td>SystemAll</td>
+                                                <td><form asp-action="EditAuthorized" asp-controller="Account">
+                                                    <button type="submit" class="btn btn-warning"
+                                                    data-id1="938" data-id2="C014854"  
+                                                    data-id3="ศิริรัตน์" data-id4="อัยราคม"
+                                                    data-id5="">
+                                                    <div class="icon">
+                                                        <i class="fas fa-edit"></i>
+                                                    </div></button>
+                                                    <a class="btn btn-danger" 
+                                                    data-toggle="modal" data-target="#modal-Delete"  data-id1="">
+                                                    <div class="icon">
+                                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                                    </div>
+                                                    </a>
+                                                </form></td>
+                                                </tr>
+                                                <tr>
+                                                <td>938</td>
+                                                <td>C014854</td>
+                                                <td>ศิริรัตน์</td>
+                                                <td>อัยราคม</span></td>
+                                                <td><!-- /if(Authorized ==Null){
+
+                                                } --><a asp-action="CreateAuthorized" asp-controller="Account"
+                                                    data-id1="938" data-id2="C014854"  
+                                                    data-id3="ศิริรัตน์" data-id4="อัยราคม"
+                                                    data-id5="" class="btn btn-success">
+                                                    เพิ่ม</a><!-- /if(Authorized ==Null){
+                                                } --></td>
+                                                <td>Null</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div class="modal fade" id="modal-Delete" tabindex="-1" role="dialog" aria-labelledby="deleteconformation">
+        <div class="modal-dialog" style="width:501px !important;margin:0 auto;">
+            <div class="modal-content">
+                <div class="modal-header" style="background:#d9534f;color:white;">
+                    <h4 class="modal-title" id="delete-conformation">
+                        Delete Confirmation
+                    </h4>
+                </div>
+                <form asp-action="Delete" asp-controller="Create" asp-route-startDate="@ViewBag.StartDate" asp-route-endDate="@ViewBag.EndDate">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <span>
+                                        Are you sure you want to delete?
+                                    </span>
+                                    <input class="btn btn-xs btn-flat inputs" name="id" type="text" id="id1" value="id1"
+                                        readonly />
+                                    <input class="btn btn-xs btn-flat inputs" type="text" id="id2" readonly />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
